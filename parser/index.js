@@ -62,7 +62,7 @@ let currentWeather = response => {
 		//Access conditions
 		let {text, temp, code} = resp.item.condition; // text = resp.item.condition.text
 		//console.log(`${getPrefix(code)}`);
-		return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}. It is ${getFeel(Number(temp)).red.bold} at ${temp.red.bold} degrees Celsius.`;
+		return `Right now, ${getPrefix(code)} ${text.toLowerCase()} in ${location}. It is ${getFeel(Number(temp))} at ${temp} degrees Celsius.`;
 	} else {
 		return "I don't seem to know about this place... Sorry :(";
 	}
@@ -80,7 +80,7 @@ let forecastWeather = (response, data) => {
 		let location = `${resp.location.city}, ${resp.location.country}`;
 		let regEx = new RegExp(data.weather, "i");
 		let testConditions = regEx.test(getForecast.text); //true or false
-		return `${testConditions ? 'Yes' : 'No'}, ${getPrefix(getForecast.code, 'future')} ${getForecast.text.bold.red} ${data.time} in ${location}`;
+		return `${testConditions ? 'Yes' : 'No'}, ${getPrefix(getForecast.code, 'future')} ${getForecast.text} ${data.time} in ${location}`;
 	} else {
 		return "I don't seem to know about this place... Sorry :(";
 	}
@@ -96,7 +96,7 @@ let forecastWeatherNoCmp = (response, data) => {
 			return item.date === parseDate;
 		})[0];
 		let location = `${resp.location.city}, ${resp.location.country}`;
-		return `${capitalizeFirstLetter(data.time)}, ${getPrefix(getForecast.code, 'future')} ${getForecast.text.bold.red} in ${location}. It will be ${getFeel(Number(getAverage(getForecast))).red.bold} at ${getAverage(getForecast).red.bold} degrees Celsius.`;
+		return `${capitalizeFirstLetter(data.time)}, ${getPrefix(getForecast.code, 'future')} ${getForecast.text} in ${location}. It will be ${getFeel(Number(getAverage(getForecast)))} at ${getAverage(getForecast)} degrees Celsius.`;
 	} else {
 		return "I don't seem to know about this place... Sorry :(";
 	}
