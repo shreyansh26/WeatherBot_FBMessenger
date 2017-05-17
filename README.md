@@ -12,6 +12,9 @@ For getting the weather the bot uses the Yahoo! Weather API.
 Running the bot
 ---------------
 
+Head to facebook.com / Messenger app and search for the page **Weather** by Shreyansh Singh. For Messenger, just start chatting. You can start with a greeting like "Hi".
+
+For facebook.com you will have to go to **Send Message** to start chatting with the bot.
 
 
 Examples/Usage
