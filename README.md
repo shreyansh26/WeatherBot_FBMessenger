@@ -1,7 +1,7 @@
 Weather Bot
 ===========
 
-This is a rule base chatbot created on the **Facebook Messenger Platform** which can converse with the user and tell the current weather at any place. It can also help to forecast weather for next two days.
+This is a rule base chatbot created on the **Facebook Messenger Platform** which can converse with the user and tell the current weather for any location. It can also help to forecast weather for next two days.
 
 The bot is rule based i.e it uses Regular Expressions (RegEx) to interpret the user's inputs.
 
