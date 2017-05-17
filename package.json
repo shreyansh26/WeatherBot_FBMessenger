@@ -2,12 +2,15 @@
   "name": "vanilla",
   "version": "1.0.0",
   "description": "A weather command line chatbot",
-  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shreyansh26",
   "license": "ISC",
+  "engines": {
+    "node": "7.10.0"
+  },
   "dependencies": {
     "colors": "1.1.2",
     "moment": "^2.13.0",
